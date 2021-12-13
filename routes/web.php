@@ -43,5 +43,7 @@ Route::view("/register", 'register');
 
 Route::post("/register", [UserController::class, 'register']);
 
+Route::post("pay_now", [ProductController::class, 'payNow']);
+
 
 
