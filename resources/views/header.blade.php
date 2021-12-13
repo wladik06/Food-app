@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
-                <li class=""><a href="#">Order</a></li>
+                <li class=""><a href="/order_history">Order history</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/cart">Cart ({{$total}})</a></li>

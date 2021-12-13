@@ -45,5 +45,8 @@ Route::post("/register", [UserController::class, 'register']);
 
 Route::post("pay_now", [ProductController::class, 'payNow']);
 
+Route::get("order_history", [ProductController::class, 'orderHistory']);
+
+
 
 

@@ -62,7 +62,7 @@ class ProductController extends Controller
 
     function payNow(Request $request) {
         $userId = Session::get('user')['id'];
-        $allCart = Cart::where('user_id',$userId)->get();
+        $allCart = Cart::where('user_id', $userId)->get();
         foreach ($allCart as $cart) {
             $order= new Order;
             $order->product_id = $cart['product_id'];
@@ -71,9 +71,17 @@ class ProductController extends Controller
             $order->payment_method = $request->payment;
             $order->payment_status = "Pending";
             $order->save();
-            Cart::where('user_id',$userId)->delete();
+            Cart::where('user_id', $userId)->delete();
         }
         $request->input();
         return redirect('/');
+    }
+
+    function orderHistory() {
+        $userId = Session::get('user')['id'];
+        $orders = DB::table('orders')->join('products', 'orders.product_id', '=', 'products.id')
+            ->where('orders.user_id', $userId)
+            ->get();
+        return view('orders',['orders' => $orders]);
     }
 }
