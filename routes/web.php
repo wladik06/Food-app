@@ -39,4 +39,9 @@ Route::get("remove_from_cart/{id}", [ProductController::class, 'removeFromCart']
 
 Route::get("proceed_to_payment", [ProductController::class, 'proceedToPayment']);
 
+Route::view("/register", 'register');
+
+Route::post("/register", [UserController::class, 'register']);
+
+
 
