@@ -84,4 +84,10 @@ class ProductController extends Controller
             ->get();
         return view('orders',['orders' => $orders]);
     }
+
+    function search(Request $request) {
+        $data = Product::where('name', $request->input('query'))
+            ->get();
+        return view('search', ['products' => $data]);
+    }
 }

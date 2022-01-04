@@ -47,6 +47,9 @@ Route::post("pay_now", [ProductController::class, 'payNow']);
 
 Route::get("order_history", [ProductController::class, 'orderHistory']);
 
+Route::get("search", [ProductController::class, 'search']);
+
+
 
 
 

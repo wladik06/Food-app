@@ -70,5 +70,8 @@
     .coll-name {
         margin-bottom: 80px;
     }
+    .search-box{
+        width: 500px !important;
+    }
 </style>
 </html>
