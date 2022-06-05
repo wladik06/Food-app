@@ -17,25 +17,25 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
                 [
-                    'name' => 'Daniel Wellington',
-                    'price' => '2000dkk',
-                    'category' => 'Formal',
-                    'description' => 'As delicate as it is powerful, it will adapt to your outfits, your styles, all in disconcerting elegance.',
-                    'gallery' => 'https://assets.ajio.com/medias/sys_master/root/h1e/hf0/16304858759198/-1117Wx1400H-460616213-rosegold-MODEL.jpg',
+                    'name' => 'Half Baked Harvest - super simple',
+                    'price' => '400dkk',
+                    'author' => 'Tieghan Gerard',
+                    'description' => 'Cooking book with recipes - description 1.',
+                    'gallery' => 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQxLYxpDT5CPY7zsRwW_lOThD9EqFjI-XGOYlYrI8SjImxsgtny',
                 ],
                 [
-                    'name' => 'Paul Rich',
-                    'price' => '2500dkk',
-                    'category' => 'Designer',
-                    'description' => 'The crimson red dial of the Sultan’s Ruby is a token of power and its gold case represents royalty.',
-                    'gallery' => 'https://cdn.shopify.com/s/files/1/1273/4183/products/SultansRubyfront.jpg?v=1614874510',
+                    'name' => 'Mastering the Art if French Cooking',
+                    'price' => '500dkk',
+                    'author' => 'Julia Child',
+                    'description' => 'Cooking book with recipes - description 2.',
+                    'gallery' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjttuCPumO-KrFJnFBrUOcFEzYAQKaYJ65Yx-CGR4i1SG83Js7',
                 ],
                 [
-                    'name' => 'Frederique Constant',
-                    'price' => '1500dkk',
-                    'category' => 'Casual',
-                    'description' => 'Dark brown calf leather strap that elevates the watch to a more formal accessory.',
-                    'gallery' => 'https://alshayawatches.com/wp-content/uploads/2021/06/FC-0188.jpg',
+                    'name' => '5 Ingredients',
+                    'price' => '700dkk',
+                    'author' => 'Jamie Oliver',
+                    'description' => 'Cooking book with recipes - description 2.',
+                    'gallery' => 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQvmzkLKWQ3rs22_t1egfIBWeauDXJWya3ahFcsUFSLduNd9FFk',
                 ]
         ]);
     }

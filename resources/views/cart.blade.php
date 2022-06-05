@@ -13,7 +13,7 @@
                             </a>
                         </div>
                         <div class="col-sm-4">
-                            <div class="">
+                            <div>
                                 <h3>{{$item->name}}</h3>
                                 <h5>{{$item->description}}</h5>
                             </div>

@@ -12,12 +12,12 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 @foreach ($products as $item)
-                    <div class="item {{$item['id'] == 5 ? 'active' : ''}}">
+                    <div class="item {{$item['id'] == 1 ? 'active' : ''}}">
                         <a href="detail/{{$item['id']}}">
                             <img class="img-slider" src="{{$item['gallery']}}">
                             <div class="carousel-caption text-slider">
                                 <h3>{{$item['name']}}</h3>
-                                <p>{{$item['description']}}</p>
+                                <p>{{$item['author']}}</p>
                             </div>
                         </a>
                     </div>
@@ -43,10 +43,11 @@
                 <div class="item-collection">
                     <a href="detail/{{$item['id']}}">
                         <img class="img-collection" src="{{$item['gallery']}}">
-                        <div class="coll-name">
                             <h3>{{$item['name']}}</h3>
-                        </div>
                     </a>
+                    <div class="coll-name">
+                    <h4>{{$item['author']}}</h4>
+                    </div>
                 </div>
             @endforeach
         </div>

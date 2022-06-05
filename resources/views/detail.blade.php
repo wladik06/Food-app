@@ -9,13 +9,15 @@
                 <a href="/">Go back</a>
                 <h2>{{$products['name']}}</h2>
                 <h3>Price: {{$products['price']}}</h3>
-                <h4>Category: {{$products['category']}}</h4>
+                <h4>Author: {{$products['author']}}</h4>
                 <h4>Description: {{$products['description']}}</h4>
                 <br><br>
                 <form action="/add_to_cart" method="POST">
                     @csrf
                     <input type="hidden" name="product_id" value={{$products['id']}}>
+                    <div class="coll-name">
                     <button class="btn btn-success">Add to Cart</button>
+                    </div>
                 </form>
                 <br><br>
             </div>
