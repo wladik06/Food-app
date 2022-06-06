@@ -10,8 +10,8 @@ blocks:
       secrets:
         - name: heroku-http
       env_vars:
-        - name: fathomless-lowlands-91208
-          value: fathomless-lowlands-91208
+        - name: ''
+          value: ''
       jobs:
         - name: Push code
           commands:
