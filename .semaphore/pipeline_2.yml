@@ -16,5 +16,6 @@ blocks:
         - name: Push code
           commands:
             - checkout --use-cache
+            - 'php artisan key:generate'
             - 'heroku git:remote -a fathomless-lowlands-91208'
             - git push heroku -f master
