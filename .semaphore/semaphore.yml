@@ -15,7 +15,6 @@ blocks:
           commands:
             - checkout
             - cache restore
-            - composer install
             - npm install
             - cache store
             - cp .env.example .env
