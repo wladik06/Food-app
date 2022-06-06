@@ -3,7 +3,7 @@ name: Semaphore PHP Pipeline
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
+    os_image: ubuntu2004
 blocks:
   - name: Install Dependencies
     task:
@@ -42,7 +42,7 @@ blocks:
             - ./vendor/bin/phpunit
       env_vars:
         - name: APP_ENV
-          value: prod
+          value: local
     dependencies:
       - Run Code Analysis
   - name: Run Browser tests
