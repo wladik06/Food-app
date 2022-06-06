@@ -51,33 +51,33 @@ blocks:
           value: local
     dependencies:
       - Run Code Analysis
-  - name: Run Browser tests
-    task:
-      jobs:
-        - name: laravel dusk
-          commands:
-            - checkout
-            - cp .env.example .env
-            - touch database/database.sqlite
-            - cache restore
-            - 'php artisan key:generate'
-            - 'php artisan dusk:update --detect'
-            - php artisan serve --env=dusk.local --port=8010 &
-            - php artisan dusk
-    dependencies:
-      - Run Unit tests
-  - name: Run Security Tests
-    task:
-      jobs:
-        - name: sensiolabs
-          commands:
-            - checkout
-            - 'git clone https://github.com/sensiolabs/security-checker.git'
-            - cd security-checker
-            - composer install
-            - 'php security-checker security:check ../composer.lock'
-    dependencies:
-      - Run Browser tests
+#  - name: Run Browser tests
+#    task:
+#      jobs:
+#        - name: laravel dusk
+#          commands:
+#            - checkout
+#            - cp .env.example .env
+#            - touch database/database.sqlite
+#            - cache restore
+#            - 'php artisan key:generate'
+#            - 'php artisan dusk:update --detect'
+#            - php artisan serve --env=dusk.local --port=8010 &
+#            - php artisan dusk
+#    dependencies:
+#      - Run Unit tests
+#  - name: Run Security Tests
+#    task:
+#      jobs:
+#        - name: sensiolabs
+#          commands:
+#            - checkout
+#            - 'git clone https://github.com/sensiolabs/security-checker.git'
+#            - cd security-checker
+#            - composer install
+#            - 'php security-checker security:check ../composer.lock'
+#    dependencies:
+#      - Run Browser tests
 promotions:
   - name: Deployment
     pipeline_file: pipeline_2.yml
