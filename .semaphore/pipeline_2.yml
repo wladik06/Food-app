@@ -10,11 +10,11 @@ blocks:
       secrets:
         - name: heroku-http
       env_vars:
-        - name:
-          value:
+        - name: fathomless-lowlands-91208
+          value: fathomless-lowlands-91208
       jobs:
         - name: Push code
           commands:
             - checkout --use-cache
-            - heroku git:remote -a fathomless-lowlands-91208
+            - 'heroku git:remote -a fathomless-lowlands-91208'
             - git push heroku -f master
