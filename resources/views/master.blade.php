@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/sass-main.css') }}">;
 </head>
 
 <body>
@@ -21,57 +22,4 @@
 {{View::make('footer')}}
 </body>
 
-<style>
-    .custom-login {
-        height: 500px;
-        padding-top: 100px;
-    }
-    .img-slider {
-        height: 400px !important;
-    }
-    .custom-product {
-        height: 600px;
-    }
-    .text-slider {
-        background-color: #4a5568 !important;
-    }
-    .img-collection {
-        height: 100px;
-    }
-    .item-collection {
-        float: left;
-        width: 20%;
-    }
-    .collection {
-        margin: 30px;
-    }
-    .img-detail {
-        height: 200px;
-    }
-    .cart-devide {
-        margin: 20px;
-        padding: 20px;
-    }
-    .unfinished {
-        text-align: center;
-        margin-bottom: 10px;
-        padding: 30px;
-    }
-    .img-constr {
-        height: 200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 100px;
-    }
-    .footer {
-        text-align: center;
-    }
-    .coll-name {
-        margin-bottom: 80px;
-    }
-    .search-box{
-        width: 500px !important;
-    }
-</style>
 </html>
