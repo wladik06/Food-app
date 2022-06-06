@@ -41,6 +41,9 @@ blocks:
             - checkout
             - cache restore
             - composer install
+            - cache store
+            - cp .env.example .env
+            - php artisan key:generate
             - ./vendor/bin/phpunit
       env_vars:
         - name: APP_ENV
