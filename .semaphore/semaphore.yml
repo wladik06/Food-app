@@ -42,7 +42,7 @@ blocks:
           commands:
             - checkout
             - cache restore
-            - php artisan test
+            - ./vendor/bin/phpunit
   - name: Run Browser tests
     task:
       jobs:
