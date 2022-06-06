@@ -16,6 +16,7 @@ blocks:
             - checkout
             - cache restore
             - npm install
+            - composer install
             - cache store
             - cp .env.example .env
     dependencies: []
