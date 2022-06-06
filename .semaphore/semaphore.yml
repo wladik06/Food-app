@@ -18,7 +18,6 @@ blocks:
             - npm install
             - cache store
             - cp .env.example .env
-#            - php artisan key:generate
   - name: Run Code Analysis
     task:
       prologue:
@@ -26,12 +25,12 @@ blocks:
           - checkout
           - cache restore
       jobs:
-        - name: phpmd
-          commands:
-            - php vendor/bin/phpmd app/ text phpmd_ruleset.xml
-        - name: phpcs
-          commands:
-            - php vendor/bin/phpcs app --report-full --standard=PSR2
+#        - name: phpmd
+#          commands:
+#            - php vendor/bin/phpmd app/ text phpmd_ruleset.xml
+#        - name: phpcs
+#          commands:
+#            - php vendor/bin/phpcs app --report-full --standard=PSR2
         - name: phpcpd
           commands:
             - 'curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar'
