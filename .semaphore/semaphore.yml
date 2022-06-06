@@ -18,6 +18,7 @@ blocks:
             - npm install
             - cache store
             - cp .env.example .env
+    dependencies: []
   - name: Run Code Analysis
     task:
       prologue:
@@ -29,6 +30,8 @@ blocks:
           commands:
             - 'curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar'
             - php phpcpd.phar app/ --min-lines=50
+    dependencies:
+      - Install Dependencies
   - name: Run Unit tests
     task:
       jobs:
@@ -39,7 +42,9 @@ blocks:
             - ./vendor/bin/phpunit
       env_vars:
         - name: APP_ENV
-          value: local
+          value: prod
+    dependencies:
+      - Run Code Analysis
   - name: Run Browser tests
     task:
       jobs:
@@ -53,6 +58,8 @@ blocks:
             - 'php artisan dusk:update --detect'
             - php artisan serve --env=dusk.local --port=8010 &
             - php artisan dusk
+    dependencies:
+      - Run Unit tests
   - name: Run Security Tests
     task:
       jobs:
@@ -63,6 +70,8 @@ blocks:
             - cd security-checker
             - composer install
             - 'php security-checker security:check ../composer.lock'
+    dependencies:
+      - Run Browser tests
 promotions:
   - name: Deployment
     pipeline_file: pipeline_2.yml
