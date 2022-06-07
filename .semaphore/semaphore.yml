@@ -49,8 +49,3 @@ blocks:
           value: local
     dependencies:
       - Run Code Analysis
-promotions:
-  - name: Deployment
-    pipeline_file: pipeline_2.yml
-    auto_promote:
-      when: branch = 'master' AND result = 'passed'
