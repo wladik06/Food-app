@@ -7,8 +7,6 @@ agent:
 blocks:
   - name: Deploy
     task:
-      secrets:
-        - name: first-secret-with-file
       env_vars:
         - name: fathomless-lowlands-91208
           value: fathomless-lowlands-91208
