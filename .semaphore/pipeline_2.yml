@@ -8,7 +8,7 @@ blocks:
   - name: Deploy
     task:
       secrets:
-        - name: heroku-http
+        - name: first-secret-with-file
       env_vars:
         - name: fathomless-lowlands-91208
           value: fathomless-lowlands-91208
@@ -16,6 +16,5 @@ blocks:
         - name: Push code
           commands:
             - checkout --use-cache
-            - 'php artisan key:generate'
             - 'heroku git:remote -a fathomless-lowlands-91208'
             - git push heroku -f master
