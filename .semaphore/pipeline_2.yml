@@ -17,6 +17,4 @@ blocks:
             - git config --global user.email "wladik11399@gmail.com"
             - git config --global user.name "wladik06"
             - 'git remote add heroku git@heroku.com:fathomless-lowlands-91208.git'
-            - git add -u
-            - git commit
             - git push heroku master
