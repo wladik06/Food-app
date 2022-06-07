@@ -8,8 +8,8 @@ blocks:
   - name: Deploy
     task:
       env_vars:
-        - name: fathomless-lowlands-91208
-          value: fathomless-lowlands-91208
+        - name: APP_ENV
+          value: local
       jobs:
         - name: Push code
           commands:
