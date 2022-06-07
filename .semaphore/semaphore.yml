@@ -16,7 +16,6 @@ blocks:
             - checkout
             - cache restore
             - npm install
-            - composer install
             - cache store
             - cp .env.example .env
     dependencies: []
@@ -40,7 +39,6 @@ blocks:
           commands:
             - checkout
             - cache restore
-            - composer install
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
