@@ -14,5 +14,7 @@ blocks:
         - name: Push code
           commands:
             - checkout --use-cache
-            - 'heroku git:remote -a fathomless-lowlands-91208'
-            - git push heroku -f master
+            - 'git remote add heroku git@heroku.com:fathomless-lowlands-91208.git'
+            - git add -u
+            - git commit
+            - git push heroku master
