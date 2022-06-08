@@ -59,4 +59,8 @@ blocks:
             - checkout
             - cp .env.example .env
             - cache restore
+            - 'php artisan key:generate'
+            - 'php artisan dusk:update --detect'
+            - php artisan serve --env=dusk.local --port=8010 &
+            - php artisan dusk
             - php artisan dusk
