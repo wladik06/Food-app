@@ -5,7 +5,7 @@
             <div class="collection">
                 <h2>Your order history:</h2>
                 @foreach ($orders as $item)
-                    <div class="row searched-item cart-devide">
+                    <div class="row searched-item cart">
                         <div class="col-sm-3">
                             <a href="detail/{{$item->id}}">
                                 <img class="img-collection" src="{{$item->gallery}}">

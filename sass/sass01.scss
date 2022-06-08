@@ -1,8 +1,38 @@
-//$bgColor: blue;
-//
-//body {
-//    background-color: $bgColor;
-//}
+$bgColor: lightgreen;
+$height: 200px;
+
+.navbar {
+    background-color: $bgColor;
+}
+.img-detail {
+    height: $height;
+}
+.img-constr {
+    height: $height;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+@mixin marg-pad {
+    margin: 20px;
+    padding: 20px;
+}
+
+.collection {
+    @include marg-pad;
+}
+.cart {
+    @include marg-pad;
+}
+
+@import "sass02";
+.coll-name {
+    @extend .img-container;
+    margin-bottom: 80px;
+    font-style: italic;
+}
 
 .custom-login {
     height: 500px;
@@ -24,33 +54,8 @@
     float: left;
     width: 20%;
 }
-.collection {
-    margin: 30px;
-}
-.img-detail {
-    height: 200px;
-}
-.cart-devide {
-    margin: 20px;
-    padding: 20px;
-}
-.unfinished {
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 30px;
-}
-.img-constr {
-    height: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-}
 .footer {
     text-align: center;
-}
-.coll-name {
-    margin-bottom: 80px;
 }
 .search-box{
     width: 500px !important;

@@ -42,10 +42,12 @@
             @foreach($products as $item)
                 <div class="item-collection">
                     <a href="detail/{{$item['id']}}">
+                        <div class="img-container">
                         <img class="img-collection" src="{{$item['gallery']}}">
                             <h3>{{$item['name']}}</h3>
+                        </div>
                     </a>
-                    <div class="coll-name">
+                    <div class="coll-name img-container">
                     <h4>{{$item['author']}}</h4>
                     </div>
                 </div>

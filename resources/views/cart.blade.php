@@ -6,7 +6,7 @@
                 <h2>Items in your cart:</h2>
                 <br> <br>
                 @foreach($products as $item)
-                    <div class=" row searched-item cart-devide">
+                    <div class=" row searched-item cart">
                         <div class="col-sm-2">
                             <a href="detail/{{$item->id}}">
                                 <img class="img-collection" src="{{$item->gallery}}">
