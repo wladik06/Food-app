@@ -49,3 +49,16 @@ blocks:
           value: local
     dependencies:
       - Run Code Analysis
+  - name: Run Browser tests
+    dependencies:
+      - Run Unit tests
+    task:
+      jobs:
+        - name: laravel dusk
+          commands:
+            - checkout
+            - cp .env.example .env
+            - cache restore
+            - 'php artisan dusk:update --detect'
+            - php artisan serve --env=dusk.local --port=8010 &
+            - php artisan dusk
